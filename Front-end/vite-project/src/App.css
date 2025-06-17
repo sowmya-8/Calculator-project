@@ -1,0 +1,102 @@
+/* Fullscreen background from external URL */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://i.pinimg.com/736x/8c/43/64/8c43645fe8d0ac164a6925448be32858.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+}
+
+/* App container overlay */
+.app-container {
+  background-color: rgba(0, 0, 0, 0.7); /* dark overlay */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically */
+  align-items: center;     /* center horizontally */
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Bright, bold heading */
+.app-container h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+/* Button layout */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Calculator Buttons */
+.button-grid button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 220px;
+}
+
+.button-grid button:hover {
+  background-color: #3367d6;
+}
+
+/* Back button */
+.back-btn {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #d93025;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #c5221f;
+}
+
+@media (max-width: 600px) {
+  .app-container h1 {
+    font-size: 2rem;
+  }
+
+  .button-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-grid button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .back-btn {
+    width: 90%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
